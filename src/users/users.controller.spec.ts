@@ -56,9 +56,9 @@ describe('UsersController Tests', () => {
 
         const updatedUser = { name: 'Brendo', email: 'brendo@gmail.com'}
 
-        mockUserService.update.mockResolvedValue(users[2])
+        mockUserService.update.mockResolvedValue(updatedUser)
 
-        expect(await controller.update(users[2].id, updatedUser)).toEqual(users[2])
+        expect(await controller.update(users[2].id, updatedUser)).toEqual(updatedUser)
     })
 
     it('deve deletar um usuário específico', async () => {
